@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
@@ -26,8 +26,8 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Build Hugo site
-        run: hugo --minify
+      - name: Build site
+        run: hugo --minify --baseURL "https://vpapapanagiotou.github.io/cmdr-levasileios/"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v2
