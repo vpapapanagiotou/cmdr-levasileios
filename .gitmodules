@@ -1,0 +1,6 @@
+[submodule "themes/hugo-theme-gallery"]
+	path = themes/hugo-theme-gallery
+	url = git@github.com:nicokaiser/hugo-theme-gallery.git
+[submodule "themes/gallery"]
+	path = themes/gallery
+	url = https://github.com/nicokaiser/hugo-theme-gallery.git
