@@ -1,4 +1,5 @@
 baseURL = 'https://vpapapanagiotou.github.io/cmdr-levasileios/'
+publishDir = "public"
 theme = "gallery"
 
 copyright = "© Vasileios Papapanagiotou"
